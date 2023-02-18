@@ -13,14 +13,14 @@ const baseConverter = (
 }
 
 /**
- * Converts a number to a string with the specified number of decimals
+ * Converts a number to decimals without problems with floating point numbers
  * @param {number | string} value Number to be converted
  * @param {number } decimals Number of decimals
  * @returns {number}
  * @summary Resolves the problem of floating point numbers in JavaScript
  * @see https://0.30000000000000004.com/
  * @example
- *  toDecimals(0.2 + 0.1, 0) // 3.1415
+ *  toDecimals(0.2 + 0.1, 1) // 0.3 
  *  toDecimals(3.14159265359, 2) // 3.14
  */
 const toDecimals = (value: string | number, decimals: number): number =>
